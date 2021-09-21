@@ -12,15 +12,19 @@ const Countries = () => {
     }, []);
 
     return (
-        <div className="Countries">
-            {
-                countries.map(country => {
-                    return <Country
-                        key={country.capital}
-                        country={country} />
-                })
-            }
+        <div>
+            <h1>Total countries loaded: {countries.length}</h1>
+            <div className="Countries">
+                {
+                    countries.map(country => {
+                        return <Country
+                            key={country.capital}
+                            country={country} />
+                    })
+                }
+            </div>
         </div>
+
     )
 };
 

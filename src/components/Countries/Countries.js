@@ -15,7 +15,9 @@ const Countries = () => {
         <div className="Countries">
             {
                 countries.map(country => {
-                    return <Country country={country} />
+                    return <Country
+                        key={country.capital}
+                        country={country} />
                 })
             }
         </div>
